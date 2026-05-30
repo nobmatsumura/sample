@@ -1,0 +1,14 @@
+name = "line-dinner-menu-bot"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# メニュープールの保存先。下記 id は
+#   npx wrangler kv namespace create MENUS
+# で発行された値に置き換えてください。
+[[kv_namespaces]]
+binding = "MENUS"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+
+# シークレットはコミットしません。デプロイ前に登録します:
+#   npx wrangler secret put LINE_CHANNEL_SECRET
+#   npx wrangler secret put LINE_CHANNEL_ACCESS_TOKEN
